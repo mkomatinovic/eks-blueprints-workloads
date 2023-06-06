@@ -1,4 +1,3 @@
-cat << EOF > teams/team-riker/dev/templates/karpenter.yaml 
 {{ if .Values.spec.karpenterInstanceProfile }}
 apiVersion: karpenter.k8s.aws/v1alpha1
 kind: AWSNodeTemplate
@@ -83,4 +82,3 @@ spec:
       memory: 5Gi
       ephemeral-storage: 2Gi
 {{ end }}
-EOF
